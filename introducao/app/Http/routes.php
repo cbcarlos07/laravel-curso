@@ -14,3 +14,9 @@
 Route::get('/', function () {
     return view('welcome');
 });
+
+Route::get('/clientes', 'ClienteController@listar');
+Route::get('/clientes/listar', 'ClienteController@listar2');
+Route::get('/clientes/novo', 'ClienteController@novo');
+Route::get('/clientes/editar/{id?}', 'ClienteController@editar')->where('id','[0-9]');
+
